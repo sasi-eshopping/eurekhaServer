@@ -1,0 +1,23 @@
+zuul:
+  sensitiveHeaders: Cookie,Set-Cookie
+  routes:
+    eShopping:
+      path: /eShopping/**
+      url: http://localhost:8080/eShopping
+    users:
+      path: /users/**
+      url: http://localhost:8085/users
+    userinfo:
+      path: /userinfo/**
+      url: http://localhost:8080/eShopping/userinfo
+    oauth:
+      path: /oauth/**
+      url: http://localhost:8085/oauth
+
+
+security:
+    oauth2:
+      resource:
+         jwt:
+           key-value: as466gf
+      
